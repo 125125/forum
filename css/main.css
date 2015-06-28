@@ -1,0 +1,50 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+#header{
+  width: 80%;
+  margin: auto;
+}
+#nav{
+  height: 50px;
+  background: #f0f0f0;
+}
+li{
+  margin:auto;
+  float:left;
+  display:block;
+}
+a{
+  text-decoration:none;
+}
+td {
+  padding-left:15px;
+}
+table{
+  border-collapse:collapse;
+  min-height: 50px;
+  width:80%;
+  margin:200px auto;
+  text-align:center;
+}
+th.category{
+  background:azure;
+  height:25px;
+}
+td.icon{
+  width:5%
+}
+td.topic{
+text-align:left;
+}
+td.post{
+  width:20%;
+  text-align:left;
+  padding-left: 50px;
+}
+td.last-post{
+  width:20%;
+  text-align: left;
+  padding-left: 50px;
+}
