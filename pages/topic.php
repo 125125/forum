@@ -17,7 +17,9 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
 		$title = $row['title'];
 		echo "<tr>";
-		echo "<td><a href='?p=$title'>$title</a></td>";
+		echo "<td style='width:600px; text-align:left;'><a href='?p=$title'>$title</a></td>";
+		echo "<td>Started By: Tok124</td>";
+		echo "<td>Replies: 0</td>";
 		echo "</tr>";
     }
 } else {
@@ -25,3 +27,22 @@ if ($result->num_rows > 0) {
 }
 ?>
 </table>
+<?php
+if($_SESSION['username'] == "") {}else{
+?>
+<div class="newthread">
+	<div class="newthreadtitle">
+	Start new Thread
+	</div>
+	<div class="newthreadform">
+		<form action="functions/newthread.php" method="POST">
+			<input type="hidden" name="topic" value="<?php echo $_GET['p']; ?>">
+			<input type="text" name="title" placeholder="title">
+			<textarea name="content" placeholder="Your Message"></textarea>
+			<input type="submit" value="Post">
+		</form>
+	</div>
+</div>
+<?php
+}
+?>
