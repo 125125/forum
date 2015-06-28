@@ -1,7 +1,7 @@
 <nav>
 	<ul>
-		<li><a href="#">Uno</a></li>
-		<li><a href="#">Dos</a></li>
+		<li><a href="?p=home">Home</a></li>
+		<li><a href="?p=register">Register</a></li>
 		<li><a href="#">Tres</a></li>
 		<li><a href="#">Quattro</a></li>
 		<li><a href="#">Register</a></li>
