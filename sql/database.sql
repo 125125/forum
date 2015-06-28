@@ -47,13 +47,14 @@ CREATE TABLE IF NOT EXISTS `posts` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Dumping data for table forum.posts: ~2 rows (approximately)
+-- Dumping data for table forum.posts: ~3 rows (approximately)
 DELETE FROM `posts`;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
 INSERT INTO `posts` (`id`, `title`, `content`, `username`, `topic_name`, `post_date`) VALUES
 	(1, 'Horunge', 'Kuksugare knullar penisar', 'tok124', 'Topic1', '2015-06-28 07:56:14'),
 	(2, 'Negersvart', 'Neger natalies bullfitta', 'tok124', 'Topic2', '2015-06-28 08:47:58'),
-	(3, 'Kuksugare', 'Balle fitta stake. Det hänger tuttar i taket', 'tok124', 'Topic1', '2015-06-28 17:21:40');
+	(3, 'Kuksugare', 'Balle fitta stake. Det hänger tuttar i taket', 'tok124', 'Topic1', '2015-06-28 17:21:40'),
+	(4, 'My first post', 'This is a random post for test', 'tok124', 'My First Topic', '2015-06-28 18:15:26');
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 
 
@@ -71,7 +72,8 @@ DELETE FROM `topics`;
 /*!40000 ALTER TABLE `topics` DISABLE KEYS */;
 INSERT INTO `topics` (`id`, `topic_name`, `lang`) VALUES
 	(1, 'Topic1', 'english'),
-	(2, 'Topic2', 'swedish');
+	(2, 'Topic2', 'swedish'),
+	(3, 'My First Topic', 'swedish');
 /*!40000 ALTER TABLE `topics` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
