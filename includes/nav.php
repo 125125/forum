@@ -1,13 +1,18 @@
 <nav>
 	<ul>
-		<li><a href="?p=home">Home</a></li>
-		<li><a href="?p=register">Register</a></li>
-		<li><a href="#">Tres</a></li>
-		<li><a href="#">Quattro</a></li>
-		<li><a href="#">Register</a></li>
-		<li><a href="#" class="login">Login</a></li>
+<?php
+session_start();
+if (!empty($_SESSION['username'])) {
+	echo "<li><a href='?p=home'>Home</a></li>";
+	echo "<li><a href='#'>Tres</a></li>";
+	echo "<li><a href='#'>Quattro</a></li>";
+	echo "<li><a href='functions/logout.php'>logout</a></li>";
+}else{
+	echo "<li><a href='?p=register'>Register</a></li>";
+	echo "<li><a href='#' class='login'>Login</a></li>";
+}
+?>
 	</ul>
-</li>
 </nav>
 <div id="loginbox">
 	<div id="loginform">
