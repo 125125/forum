@@ -18,9 +18,9 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
 		$topic = $row['topic_name'];
 		echo "<tr colspan='5'>";
-		echo "<td class='icon'><img src='#' /></td>";
+		echo "<td class='icon'><center><img src='images/opensection.png' alt='' height='40' width='40' title='Open Section' /></center></td>";
 		echo "<td class='topic'><a href='?p=$topic'>$topic</a></td>";
-		echo "<td class='post'>Posts: </td>";
+		echo "<td class='post'>Posts: 0</td>";
 		echo "<td class='last-post'>Last post: </td>";
 		echo "</tr>";
     }
@@ -47,14 +47,13 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
 		$topic = $row['topic_name'];
 		echo "<tr colspan='5'>";
-		echo "<td class='icon'><img src='#' /></td>";
+		echo "<td class='icon'><center><img src='images/lockedsection.png' alt='' height='40' width='40' title='Open Section' /></center></td>";
 		echo "<td class='topic'><a href='?p=$topic'>$topic</a></td>";
-		echo "<td class='post'>Posts: </td>";
+		echo "<td class='post'>Posts: 0</td>";
 		echo "<td class='last-post'>Last post: </td>";
 		echo "</tr>";
     }
 } else {
 }
-$conn->close();
-?> 
+?>
 </table>

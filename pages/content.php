@@ -16,12 +16,12 @@ if ($result->num_rows > 0) {
 		$content = $row['content'];
 		$user = $row['username'];
 		$date = $row['post_date'];
-		echo $title . "<br>";
-		echo $content . "<br>";
-		echo $user . "<br>";
-		echo $date . "<br>";
+		echo "<div class='posttitle'><p>$title</p></div>";
+		echo "<div class='postcontent'><p>" . nl2br($content) . "</p></div>";
+		echo "<div class='postfoot'><p>Posted By: $user On $date</p></div>";
     }
 } else {
     echo "0 results";
 }
 ?>
+<button>Reply</button>

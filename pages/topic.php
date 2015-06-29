@@ -9,16 +9,17 @@ if ($conn->connect_error) {
 
 $page = $_GET['p'];
 
-$sql = "SELECT title FROM posts WHERE topic_name='$page'";
+$sql = "SELECT * FROM posts WHERE topic_name='$page'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
 		$title = $row['title'];
+		$user = $row['username'];
 		echo "<tr>";
 		echo "<td style='width:600px; text-align:left;'><a href='?p=$title'>$title</a></td>";
-		echo "<td>Started By: Tok124</td>";
+		echo "<td>Started By: $user</td>";
 		echo "<td>Replies: 0</td>";
 		echo "</tr>";
     }
